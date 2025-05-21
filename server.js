@@ -1,12 +1,16 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
-const cors = require("cors");      // <--- Added cors
+const cors = require("cors"); // ✅ Added
 require("dotenv").config();
 
 const app = express();
 
-app.use(cors());                   // <--- Use cors middleware here
+app.use(cors({
+  origin: "http://localhost:3000", // ✅ Allow frontend origin
+  credentials: true
+}));
+
 app.use(express.json());
 
 const startServer = async () => {
