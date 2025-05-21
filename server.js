@@ -7,7 +7,7 @@ require("dotenv").config();
 const app = express();
 
 app.use(cors({
-  origin: ["http://localhost:3000", "https://timely-faloodeh-e211f5.netlify.app/"], // ✅ Allow frontend origin
+  origin: ["http://localhost:3000", "https://timely-faloodeh-e211f5.netlify.app/", "majestic-granita-dfcd3b.netlify.app"], // ✅ Allow frontend origin
   credentials: true
 }));
 
