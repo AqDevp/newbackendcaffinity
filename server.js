@@ -1,12 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
-const cors = require("cors");      // <--- Added cors
 require("dotenv").config();
 
 const app = express();
-
-app.use(cors());                   // <--- Use cors middleware here
 app.use(express.json());
 
 const startServer = async () => {
